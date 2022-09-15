@@ -1,0 +1,19 @@
+.aboutContainer {
+    display: flexbox;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 50vh;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid black;
+    align-content: center;
+    justify-content: center;
+}
+
+.aboutText {
+    display: flexbox;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+}

@@ -1,0 +1,45 @@
+.pixelArtContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pixelCanvas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.pixelCanvas>* {
+    flex: 0 0 4%;
+}
+
+.artButtons {
+    border-radius: -1px;
+    height: 24px;
+    width: 24px;
+}
+
+.openBoardButton {
+    border: none;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 5px gray;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+
+.openBoardButton:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.openBoardButton:active {
+    scale: .98;
+}

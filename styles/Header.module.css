@@ -1,3 +1,32 @@
+.navBar {
+    display: flex;
+    width: 100vw;
+    max-height: 300px;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 150px;
+}
+
 .header {
-    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: black;
+    font-family: 'PT Sans Narrow', sans-serif;
+    align-self: center;
+    margin-right: 24%;
+}
+
+.menuButton {
+    box-shadow: 0px 0px 5px 5px gray;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    justify-self: left;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-right: 10%;
+}
+.menuButton:hover {
+    scale: 1.02;
+    cursor: pointer;
 }

@@ -1,15 +1,30 @@
 import React, { useState } from "react";
 import styles from "../styles/PixelArtMaker.module.css";
 const PixelArtMaker = () => {
-
   let [pixel, setPixel] = useState([]);
   const [isBoardOpen, setIsBoardOpen] = useState(false);
-  let [isActive, setIsActive] = useState(false);
-  let [paintbrush, setPaintbrush] = useState('#F0FFFF')  //user chooses paintbrush, set state, update style in the button, might have to make a a new button and replace it?
+  let [colorPicker, setColorPicker] = useState("");
+  const [isMouseDown, setIsMouseDown] = useState(false)
+  // const colorChoice = (e) => {
+  //   const colorValue = e.target.value;
+  //   setColorPicker((colorPicker = colorValue));
+  //   console.log(colorPicker);
+  // };
+
+  // const paintCanvas = () => {
+  //   const targetPixel = pixel.currentTarget;
+  //   if (isMouseDown === true) {
+  //     targetPixel.style.backgroundColor = colorPicker;
+  //   }
+  // }
+
   const colorTime = (pixel) => {
-    const targetPixel = pixel.currentTarget
-    setPaintbrush(paintbrush = "#000000")
-    targetPixel.style.backgroundColor = paintbrush //holy shit, i had to dig to target this.
+    console.log(colorPicker);
+    setColorPicker(
+      (colorPicker = document.getElementById("colorpicker").value)
+    );
+    const targetPixel = pixel.currentTarget;
+    targetPixel.style.backgroundColor = colorPicker; //holy shit, i had to dig to target this.
   };
 
   const boardSetUp = () => {
@@ -22,10 +37,8 @@ const PixelArtMaker = () => {
             key={i}
             data-key={i}
             className={styles.artButtons}
-            onClick={colorTime}
-            style={{background: paintbrush}}
-           >
-            </button>,
+            onMouseDown={colorTime}
+          ></button>,
         ]);
       }
     } else {
@@ -39,7 +52,7 @@ const PixelArtMaker = () => {
         Open
       </button>
       <div className={styles.pixelCanvas}>{pixel}</div>
-      hello
+      <input type="color" id="colorpicker" />
     </div>
   );
 };

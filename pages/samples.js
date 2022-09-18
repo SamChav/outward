@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Samples.module.css";
-import PixelArtMaker from "./PixelArt";
+import PixelArtMaker from "../components/PixelArt";
+import Header from "../components/Header";
 const Samples = (props) => {
 
 // ___________________________this is the timer and its functions
@@ -32,8 +33,9 @@ const Samples = (props) => {
 
 // ___________________________moving pixel art maker to its own component(end)
 
-  return (
+  return (    
     <div className={styles.samplesContainer}>
+    <Header />
       <div className={styles.sampleOne}>
         <div className={styles.sampleOneText}>
           So, in my first ever developer interviewer I stumbled trying to get a

@@ -11,17 +11,18 @@
     flex-wrap: wrap;
     gap: none;
     width: 100%;
+    height: fit-content;
     justify-content: center;
 }
 
 .pixelCanvas>* {
-    flex: 0 0 4%;
+    flex: 0 0 2%;
 }
 
 .artButtons {
     border-radius: -1px;
-    height: 24px;
-    width: 24px;
+    height: 1vw;
+    aspect-ratio: 1 / 1;
 }
 
 .openBoardButton {

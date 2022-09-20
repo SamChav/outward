@@ -11,20 +11,17 @@
 }
 
 .header {
+    display: flex;
+    align-self: center;
     position: absolute;
     background-color: white;
     color: black;
-    align-self: center;
-    justify-self: center;
 }
 
 .menuButton {
     box-shadow: 0px 0px 5px 5px gray;
     width: 200px;
     height: 50px;
-    margin: 10px;
-    justify-self: left;
-    margin-right: 10%;
 }
 .menuButton:hover {
     scale: 1.02;
@@ -41,6 +38,9 @@
 .dropdownDiv {
     display: flex;
     position: relative;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
 }
 
 .dropdown a:hover {
@@ -52,9 +52,11 @@
     position: absolute;
     border-radius: 10px;
     background-color: #f1f1f1;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    /* left: 10px; */
+    top: 50px;
+    max-width: 200px;
 }
 
 .dropdown a {

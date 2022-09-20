@@ -11,8 +11,7 @@ const Header = () => {
       </div>
       </div>
       <h1 className={styles.header}>
-        Welcome, I'm Sam Chavez and I'm a full stack developer and an 11 year US
-        Army veteran!
+        Hi, I'm Sam Chavez and this is my portfolio!
       </h1>
     </div>
   );

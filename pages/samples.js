@@ -7,6 +7,7 @@ const Samples = (props) => {
 // ___________________________this is the timer and its functions
   const [counter, setCounter] = useState(0);
   let [tracker, setTracker] = useState(false);
+  let [lap, setLap] = useState([])
 
   const timer = async () => {
     setCounter(counter++);
@@ -29,6 +30,10 @@ const Samples = (props) => {
     setCounter((counter = 0));
     setTracker((tracker = false));
   };
+
+  const lapFunc = () => {
+    setLap((lap) => [...lap, {counter}])
+  }
 // ___________________________this is the timer and its functions(end)
 
 // ___________________________moving pixel art maker to its own component(end)
@@ -45,6 +50,9 @@ const Samples = (props) => {
         <div className={styles.counterDiv}>
           Time:
           <span id={styles.timer}>{counter}</span>
+          <div>{lap.map((el, i) => {
+            <span>{el}</span>
+          })}</div>
         </div>
         <span className={styles.sampleOneButtons}>
           <button className={styles.button} onClick={startTimer}>
@@ -56,6 +64,7 @@ const Samples = (props) => {
           <button className={styles.button} onClick={resetTimer}>
             reset
           </button>
+          <button className={styles.button} onClick={lapFunc}>Lap</button>
         </span>
       </div>
       <div className={styles.sampleTwo}>

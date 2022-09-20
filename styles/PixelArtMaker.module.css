@@ -11,16 +11,21 @@
     flex-wrap: wrap;
     gap: none;
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     height: fit-content;
     justify-content: center;
 }
 
 .pixelCanvas>* {
     flex: 0 0 2%;
+    
 }
 
 .artButtons {
-    border-radius: -1px;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    border: 1px solid rgb(161, 161, 161);
     height: 1vw;
     aspect-ratio: 1 / 1;
 }

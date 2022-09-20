@@ -16,12 +16,14 @@
     position: absolute;
     background-color: white;
     color: black;
+    overflow: hidden;
 }
 
 .menuButton {
     box-shadow: 0px 0px 5px 5px gray;
     width: 200px;
     height: 50px;
+    z-index: 1;
 }
 .menuButton:hover {
     scale: 1.02;

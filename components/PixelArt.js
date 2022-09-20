@@ -21,7 +21,6 @@ const PixelArtMaker = () => {
   const [isMouseDown, setIsMouseDown] = useState(false);
 
   function updatePixel(index) {
-    console.log(colorPicker)
     setIsMouseDown(true)  
     const pixel = pixels[index];
     const updatedPixel = { ...pixel, color: colorPicker };
@@ -35,20 +34,11 @@ const PixelArtMaker = () => {
 
   const colorPicked = (color) => {
     setColorPicker(color.hex)
-    console.log(colorPicker)
   }
-
-  // const colorTime = (pixel) => {
-  //   console.log(colorPicker)
-  //   const targetPixel = pixel.currentTarget;
-  //   setIsMouseDown((isMouseDown = true));
-  //   targetPixel.style.backgroundColor = colorPicker;
-  // };
 
   const colorMouseOver = (index) => {
     const pixel = pixels[index];
-    const updatedPixel = { ...pixel, color: colorPicker };  /*incorprate this <------------------------------------------------ */
-    console.log(isMouseDown);
+    const updatedPixel = { ...pixel, color: colorPicker }; 
     if (isMouseDown) {
       const result = [
         ...pixels.slice(0, index),
@@ -64,30 +54,6 @@ const PixelArtMaker = () => {
     setIsMouseDown(false);
     console.log("stopcoloring reached");
   };
-
-  // const boardSetUp = () => {
-  //   if (isBoardOpen === false) {
-  //     setIsBoardOpen((isBoardOpen = true));
-  //     for (let i = 0; i < 1200; i++) {
-  //       setPixel((pixel) => [
-  //         ...pixel,
-  //         <button
-  //           key={i}
-  //           data-key={i}
-  //           className={styles.artButtons}
-  //           onMouseDown={updatePixel}
-  //           onMouseOver={colorMouseOver}
-  //           onMouseUp={stopColoring}
-  //         ></button>,
-  //       ]);
-  //     }
-  //   } else {
-  //     return null;
-  //   }
-  // };
-
-
-  // boardSetUp();
 
   return (
     <div className={styles.pixelArtContainer}>
@@ -111,18 +77,5 @@ const PixelArtMaker = () => {
       <CirclePicker onChangeComplete={colorPicked} />
     </div>
   );
-
-  // return (
-  //   <div className={styles.pixelArtContainer}>
-  //     <div className={styles.pixelCanvas} onMouseEnter={stopColoring}>
-  //       {pixel}
-  //     </div>
-  //     <input type="color" id="colorpicker" onChange={updatePixel} />
-  //     {/* <button className={styles.openBoardButton}>
-  //       reset
-  //     </button> */}
-  //     <CirclePicker value={colorPicker} onChangeComplete={colorPicked}/>
-  //   </div>
-  // );
 };
 export default PixelArtMaker;

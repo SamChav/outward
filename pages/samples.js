@@ -3,56 +3,58 @@ import styles from "../styles/Samples.module.css";
 import PixelArtMaker from "../components/PixelArt";
 import Header from "../components/Header";
 const Samples = (props) => {
-
-// ___________________________this is the timer and its functions
+  // ___________________________this is the timer and its functions
   const [counter, setCounter] = useState(0);
   let [tracker, setTracker] = useState(false);
-  let [lap, setLap] = useState([])
-
-  const timer = async () => {
+  let [lap, setLap] = useState([]);
+  let lapArray = []
+  const timer = () => {
     setCounter(counter++);
   };
 
   const startTimer = () => {
-    if (tracker === false) {
-      setTracker((tracker = setInterval(timer, 1000)));
-    } else if (tracker != false) {
+    if (!tracker) {
+      setTracker(setInterval(timer, 1000));
+    } else if (tracker === true) {
       return null;
     }
   };
 
   const stopTimer = () => {
     clearInterval(tracker);
-    setTracker((tracker = false));
+    setTracker(false);
   };
 
   const resetTimer = () => {
-    setCounter((counter = 0));
-    setTracker((tracker = false));
+    clearInterval(tracker);
+    setCounter(0);
+    setTracker(false);
   };
 
   const lapFunc = () => {
-    setLap((lap) => [...lap, {counter}])
-  }
-// ___________________________this is the timer and its functions(end)
+    lapArray.push(counter)    
+    setLap(lapArray)
+    console.log(lap)
+  };
+  // ___________________________this is the timer and its functions(end)
 
-// ___________________________moving pixel art maker to its own component(end)
-
-  return (    
+  return (
     <div className={styles.samplesContainer}>
-    <Header />
+      <Header />
       <div className={styles.sampleOne}>
         <div className={styles.sampleOneText}>
           So, in my first ever developer interviewer I stumbled trying to get a
-          simple timer working. Therefore, behold, a simple timer!{" "}
+          simple timer working. Therefore, behold, a simple timer!
         </div>
 
         <div className={styles.counterDiv}>
           Time:
           <span id={styles.timer}>{counter}</span>
-          <div>{lap.map((el, i) => {
-            <span>{el}</span>
-          })}</div>
+          <div>
+            {lap.map((el, i) => {
+              <span key={i}>Lap: {el}</span>;
+            })}
+          </div>
         </div>
         <span className={styles.sampleOneButtons}>
           <button className={styles.button} onClick={startTimer}>
@@ -64,12 +66,16 @@ const Samples = (props) => {
           <button className={styles.button} onClick={resetTimer}>
             reset
           </button>
-          <button className={styles.button} onClick={lapFunc}>Lap</button>
+          <button className={styles.button} onClick={lapFunc}>
+            Lap
+          </button>
         </span>
       </div>
       <div className={styles.sampleTwo}>
-        <span className={styles.sampleTwoText}>My pixel art maker, one of my very first projects that I found to be
-        very cool.</span>
+        <span className={styles.sampleTwoText}>
+          My pixel art maker, one of my very first projects that I found to be
+          very cool.
+        </span>
         <PixelArtMaker></PixelArtMaker>
       </div>
     </div>

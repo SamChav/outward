@@ -4,7 +4,7 @@
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: max-content;
+    min-height: 100vh;
 }
 
 .pixelCanvas {
@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     gap: none;
     width: 100%;
+    min-width: fit-content;
     margin-left: 10%;
     margin-right: 10%;
     height: fit-content;

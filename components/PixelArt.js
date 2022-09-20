@@ -21,7 +21,8 @@ const PixelArtMaker = () => {
   const [isMouseDown, setIsMouseDown] = useState(false);
 
   function updatePixel(index) {
-    console.log(colorPicker)    
+    console.log(colorPicker)
+    setIsMouseDown(true)  
     const pixel = pixels[index];
     const updatedPixel = { ...pixel, color: colorPicker };
     const result = [
@@ -44,20 +45,23 @@ const PixelArtMaker = () => {
   //   targetPixel.style.backgroundColor = colorPicker;
   // };
 
-  // const colorMouseOver = (index) => {
-  //   const pixel = pixels[index];
-  //   const updatedPixel = { ...pixel, color: colorPicker };  incorprate this <------------------------------------------------
-  //   console.log(isMouseDown);
-  //   const result = [
-  //      ...pixels.slice(0, index),
-  //       updatedPixel,
-  //       ...pixels.slice(index + 1)
-  //     ];
-  //     setPixels(result);
-  //   }
+  const colorMouseOver = (index) => {
+    const pixel = pixels[index];
+    const updatedPixel = { ...pixel, color: colorPicker };  /*incorprate this <------------------------------------------------ */
+    console.log(isMouseDown);
+    if (isMouseDown) {
+      const result = [
+        ...pixels.slice(0, index),
+         updatedPixel,
+         ...pixels.slice(index + 1)
+       ];
+       setPixels(result);
+     }
+    }
+    
 
   const stopColoring = () => {
-    setIsMouseDown((isMouseDown = false));
+    setIsMouseDown(false);
     console.log("stopcoloring reached");
   };
 
@@ -96,8 +100,9 @@ const PixelArtMaker = () => {
               className={styles.artButtons}
               style={{backgroundColor: x.color}}
               onMouseDown={() => updatePixel(x.key, colorPicker)}
-
-            ></button>
+              onMouseOver={() => colorMouseOver(x.key, colorPicker)}
+              onMouseUp={stopColoring}
+              ></button>
           );
         })}
       </div>

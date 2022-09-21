@@ -4,19 +4,17 @@
     max-height: 300px;
     justify-content: center;
     border-bottom: 1px solid grey;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .header {
     display: flex;
     align-self: center;
-    position: absolute;
     background-color: white;
     color: black;
-    overflow: hidden;
+    position: relative;
 }
 
 .menuButton {
@@ -27,7 +25,6 @@
 }
 .menuButton:hover {
     scale: 1.02;
-    cursor: pointer;
 }
 
 .dropdownDiv:hover .dropdown {
@@ -43,6 +40,7 @@
     width: 200px;
     height: 50px;
     margin: 10px;
+    /* right: 10%; */
 }
 
 .dropdown a:hover {

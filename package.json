@@ -18,5 +18,8 @@
     "heroicons": "^2.0.11",
     "next": "^12.3.0",
     "react-color": "^2.19.3"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.4.0"
   }
 }

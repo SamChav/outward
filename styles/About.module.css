@@ -1,19 +1,54 @@
 .aboutContainer {
     display: flex;
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
+    height: fit-content;
     font-family: 'PT Sans Narrow', sans-serif;
     align-content: center;
     justify-content: center;
-    background-color: white;
+    background: transparent;
     color: black;
+    margin-bottom: 2%;
 }
 
 .aboutText {
     display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 100px 0px 0px 0px;
     align-self: center;
     width: 50.5%;
-    height: 50%;
-    box-shadow: 0px 0px 10px 25px gray;
+    height: fit-content;
+    box-shadow: 0px 0px 10px 25px black;
     text-indent: 1rem;
+    font-size: 2.5rem;
+    background: transparent;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.aboutText::-webkit-scrollbar {
+    display: none; /* this is for Chrome, mac stuff */
+  }
+
+.paragraph {
+    margin: 20px;
+}
+
+.imageDiv {
+    display: flex;
+    align-self: center;
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 40px;
+    margin-bottom: 2%;
+}
+
+@media(max-width:900px) {
+    .aboutContainer {
+        width: 100%;
+        font-size: .5rem;
+        height: fit-content;
+    }
 }

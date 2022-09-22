@@ -8,9 +8,9 @@ const Timer = () => {
 
   const startCounting = counter;
   const timer = () => {
-      startCounting++;
-      console.log(startCounting);
-      setCounter(startCounting);
+    startCounting++;
+    console.log(startCounting);
+    setCounter(startCounting);
   };
 
   const startTimer = () => {
@@ -32,16 +32,13 @@ const Timer = () => {
     setTracker(false);
   };
 
-  const lapFunc = () => {
-    setLap([counter]);
-    console.log(lap);
-  };
 
   return (
     <div className={styles.sampleOne}>
       <div className={styles.sampleOneText}>
-        So, in my first ever developer interviewer I stumbled trying to get a
-        simple timer working. So here it is, a simple timer!
+        <p className={styles.paragraph}>
+          During my first developer interview, I had a bit of a struggle designing a self incrementing counter. I did not expect to have trouble with it until I realized I had to go back to the basics and it took a while, but here it is! You can view the code <a style={{ textDecoration: "none" }} target="blank" href="https://github.com/SamChav/outward/blob/master/components/Timer.js">here</a>.
+        </p>
       </div>
 
       <div className={styles.counterDiv}>
@@ -63,9 +60,9 @@ const Timer = () => {
         <button className={styles.button} onClick={resetTimer}>
           reset
         </button>
-        <button className={styles.button} onClick={lapFunc}>
+        {/* <button className={styles.button} onClick={lapFunc}>
           Lap
-        </button>
+        </button> */}
       </span>
     </div>
   );

@@ -17,7 +17,7 @@ function buildPixels() {
 
 const PixelArtMaker = () => {
   const [pixels, setPixels] = useState(buildPixels());
-  let [colorPicker, setColorPicker] = useState("");
+  let [colorPicker, setColorPicker] = useState("F44336");
   const [isMouseDown, setIsMouseDown] = useState(false);
 
   function updatePixel(index) {
@@ -54,11 +54,18 @@ const PixelArtMaker = () => {
     console.log("stopcoloring reached");
   };
 
+  const resetBoard = () => {
+    setPixels(buildPixels());
+  };
+
   return (
     <div className={styles.sampleTwo}>
-      <span className={styles.sampleTwoText}>
-        My pixel art maker, one of my very first projects that I got to work on!
-      </span>
+      <div className={styles.sampleTwoText}>
+        <p>
+          This is my pixel art maker project, one of the first projects I worked on. I did refactor all the code so this would work with React!
+          You can view the code <a style={{ textDecoration: "none" }} target="blank" href="https://github.com/SamChav/outward/blob/master/components/PixelArt.js">here</a>.
+        </p>
+      </div>
       <div className={styles.pixelArtContainer}>
         <div className={styles.pixelCanvas} onMouseEnter={stopColoring}>
           {pixels.map((x) => {
@@ -75,9 +82,24 @@ const PixelArtMaker = () => {
             );
           })}
         </div>
-        {/* <input type="color" id="colorpicker" onChange={colorTime} /> */}
-
-        <CirclePicker onChangeComplete={colorPicked} className={styles.swatch}/>
+        <div className={styles.pallet}>
+          <p style={{ marginRight: "20px" }}>Current color:</p>
+          <div
+            style={{
+              backgroundColor: colorPicker,
+              width: "50px",
+              height: "50px",
+              borderRadius: "10px",
+            }}
+          ></div>
+          <CirclePicker
+            onChangeComplete={colorPicked}
+            className={styles.swatch}
+          />
+          <button className={styles.resetButton} onClick={resetBoard}>
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );

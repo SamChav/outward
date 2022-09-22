@@ -1,25 +1,26 @@
 .navBar {
     display: flex;
     width: 100vw;
-    max-height: 300px;
+    max-height: fit-content;
     justify-content: center;
-    border-bottom: 1px solid grey;
     flex-direction: row;
     flex-wrap: wrap;
     font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.5rem;
+    align-content: flex-start;
+    gap: 50px;
 }
 
 .header {
     display: flex;
     align-self: center;
-    background-color: white;
-    color: black;
     position: relative;
+    background-image: none;
 }
 
 .menuButton {
-    box-shadow: 0px 0px 5px 5px gray;
-    width: 200px;
+    box-shadow: 0px 0px 5px 5px black;
+    width: 250px;
     height: 50px;
     z-index: 1;
 }
@@ -31,7 +32,8 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    width: 300px;
+    width: 350px;
+    font-size: 1rem;
 }
 
 .dropdownDiv {
@@ -39,8 +41,7 @@
     position: relative;
     width: 200px;
     height: 50px;
-    margin: 10px;
-    /* right: 10%; */
+    margin-top: 10px;
 }
 
 .dropdown a:hover {

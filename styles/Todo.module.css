@@ -1,7 +1,7 @@
-.sampleOne {
+.todoContainer {
     display: flex;
     flex-direction: column;
-    margin: 100px 0% 0% 30%;
+    margin: 100px 30% 0% 0%;
     align-self: center;
     /* justify-self: right; */
     width: 50.5%;
@@ -16,7 +16,7 @@
     touch-action: auto; 
 }
 
-.sampleOne:hover {
+.todoContainer:hover {
     touch-action: auto;
     transform: scale(1.2);
     /* transition: background-color 5s ease-in-out 100ms, color 3s ease-in-out; */
@@ -27,69 +27,78 @@
     margin: 100px 0% 0% 0%;
   }
 
-.sampleOneText {
+.inputField {
+    align-self: center;
+    justify-self: center;
+    width: 600px;
+    min-width: 300px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.inputField:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+.ul {
     display: flex;
+    flex-direction: column;
+    list-style-type: none;
     width: 100%;
-    margin: 10px;
+    flex-wrap: wrap;
 }
 
 .paragraph {
     margin: 50px;
 }
 
-.counterDiv {    
-    display: flex;
-    margin-top: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 43%;
-}
-
-.sampleOneButtons {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    height: 100px;
-    margin-top: 10px;
-    gap: 10px;
-}
-
-.button {
-    border: none;
-    max-width: 50px;
-    min-height: 30px;
-    width: 50px;
-    height: 30px;
-    text-align: center;
-    box-shadow: 0px 0px 5px 5px gray;
-    font-family: 'PT Sans Narrow', sans-serif;
-}
-
-.button:hover {
+.svg {
+    position: absolute;
+    left: 95%;
     cursor: pointer;
-    scale: 1.05;
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
 }
 
-.button:active {
-    scale: .99;
+.bullets {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+    margin: 15px;
+    font-size: 1.5rem;
 }
+
+.todoCheckbox {
+    position: relative;
+    /* top: 15px; */
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+
 
 @media(max-width:1441px){
-    .sampleOne {
-        width: 88%;
+    .todoContainer {
+        width: 100%;
         height: fit-content;
     }
     }
     @media(max-width:801px){
-        .sampleOne{
-        width: 88%;
+        .todoContainer{
+        width: 100%;
         height: fit-content;
         }
         
     }
     @media(max-width:601px){
-        .sampleOne{
-            width: 88%;
+        .todoContainer{
+            width: 100%;
             height: fit-content;
             }
     }

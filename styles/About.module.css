@@ -8,28 +8,40 @@
     background: transparent;
     color: black;
     margin-bottom: 2%;
+    perspective: 30px;
 }
+
 
 .aboutText {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    margin: 100px 0px 0px 0px;
+    margin: 100px 0% 0% 0%;
     align-self: center;
+    justify-self: right;
     width: 50.5%;
-    height: fit-content;
-    box-shadow: 0px 0px 10px 25px black;
+    height: 20rem;
     text-indent: 1rem;
-    font-size: 2.5rem;
-    background: transparent;
-    overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    font-size: 2rem;
+    box-shadow: 0px 0px 25px 10px #9bcfff;
+    background: white;
+    color: black    ;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    touch-action: auto;
+
 }
 
-.aboutText::-webkit-scrollbar {
-    display: none; /* this is for Chrome, mac stuff */
+  .aboutText:hover {
+    touch-action: auto;
+    transform: scale(1.1);
+    transition: all 2s ease-in-out;
+    box-shadow: 0px 0px 50px 10px #5fb1ff;
+    height: 37rem;
+    z-index: 1;
+    margin: 100px 0% 0% 0%;
   }
+
+
 
 .paragraph {
     margin: 20px;
@@ -50,5 +62,19 @@
         width: 100%;
         font-size: .5rem;
         height: fit-content;
+    }
+    .aboutText {
+        width: 80.5%;
+    }
+}
+
+@media(max-width:1080px) {
+    .aboutContainer {
+        width: 100%;
+        font-size: .5rem;
+        height: fit-content;
+    }
+    .aboutText {
+        width: 80.5%;
     }
 }

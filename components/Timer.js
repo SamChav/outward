@@ -9,7 +9,6 @@ const Timer = () => {
   const startCounting = counter;
   const timer = () => {
     startCounting++;
-    console.log(startCounting);
     setCounter(startCounting);
   };
 

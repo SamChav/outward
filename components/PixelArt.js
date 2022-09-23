@@ -51,7 +51,6 @@ const PixelArtMaker = () => {
 
   const stopColoring = () => {
     setIsMouseDown(false);
-    console.log("stopcoloring reached");
   };
 
   const resetBoard = () => {

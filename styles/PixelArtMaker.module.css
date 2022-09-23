@@ -57,20 +57,33 @@
 }
 
 .sampleTwo {
-    display: flexbox;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 30% 10% 0%;
     align-self: center;
+    /* justify-self: right; */
     width: 50.5%;
-    height: 100%;
-    box-shadow: 0px 0px 10px 25px black;
+    height: 10rem;
+    box-shadow: 0px 0px 25px 10px #9bcfff;
     text-indent: 1rem;
-    margin: 50px;
-    overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    font-size: 2.5rem;
-    background-image: none;
+    font-size: 2rem;
+    background: white;
+    color: black    ;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    touch-action: auto; 
 }
+
+.sampleTwo:hover {
+    touch-action: auto;
+    transform: scale(1.2);
+    /* transition: background-color 5s ease-in-out 100ms, color 3s ease-in-out; */
+    transition: all 2s ease-in-out;
+    box-shadow: 0px 0px 50px 10px #5fb1ff;
+    height: fit-content;
+    z-index: 1;
+    margin: 100px 0% 10% 0%;
+  }
 
 .sampleTwo::-webkit-scrollbar {
     display: none; /* this is for Chrome, mac stuff */
@@ -135,8 +148,23 @@
     }
   }
 
-  @media(max-width:1441px) {
+  @media(max-width:1501px) {
     .pixelCanvas { width: 100%; height: 80%;}
+    .pixelCanvas>* {
+        flex: 1 0 2%;        
+    }
+    .artButtons{
+        aspect-ratio: 1 / 1;
+        border-radius: 2px;
+        background-color: whitesmoke;
+        border: 1px solid rgb(161, 161, 161);
+        height: 15px;
+        width: 15px;
+    }
+  }
+
+  @media(max-width:1441px) {
+    .pixelCanvas { width: 100%; height: fit-content;}
     .pixelCanvas>* {
         flex: 1 0 2%;        
     }

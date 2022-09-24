@@ -1,8 +1,8 @@
-import Head from "next/head";
 import React from "react";
-import Header from "../components/Header";
 import styles from "../styles/About.module.css";
-const App = () => {
+import Head from "next/head";
+import Header from "../components/Header";
+const About = () => {
   return (
     <div className="root">
       <Head>
@@ -40,4 +40,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default About;

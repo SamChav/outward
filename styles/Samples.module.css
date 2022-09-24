@@ -1,51 +1,86 @@
-.samplesContainer {
+.appContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100vmax;
+    height: 100vh;
+}
+
+.wrapper {
     display: flex;
     width: 100%;
-    height: fit-content;
-    flex-wrap: wrap;
+    height: 100%;
+}
+
+.samplesContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
     font-family: 'PT Sans Narrow', sans-serif;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
+    background-color: transparent;
+    background-image: url("../public/background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    /* position: relative; */
+    /* align-items: center; */
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.menuButton {
+    font-family: 'PT Sans Narrow', sans-serif;
+    position: relative;
     color: black;
-    gap: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 75px;
+    height: 50px;
+    z-index: 1;
+    background: transparent;
+    margin: 20px;
+}
+.menuButton:hover {
+    scale: 1.02;
+    outline: none;
+    cursor: pointer;
 }
 
 .statement {
     display: flex;
     flex-direction: column;
-    margin: 100px 0% 0% 30%;
-    align-self: center;
-    justify-self: right;
-    width: 50.5%;
-    height: 10rem;
-    box-shadow: 0px 0px 25px 10px #9bcfff;
+    width: 45%;
+    height: fit-content;
     text-indent: 1rem;
     font-size: 2rem;
-    background: white;
-    color: black    ;
+    color: white;
     overflow: hidden;
     transition: all 2s ease-in-out;
     touch-action: auto;
+    background: transparent;
+    position: relative;
+    background: rgb(0, 0, 0, .8);
+    border-radius: 10px;
 }
 
-.statement:hover {
+/* .statement:hover {
     touch-action: auto;
-    transform: scale(1.2);
-    /* transition: background-color 5s ease-in-out 100ms, color 3s ease-in-out; */
+    transform: scale(1.7);
     transition: all 2s ease-in-out;
-    box-shadow: 0px 0px 50px 10px #5fb1ff;
-    height: 12rem;
+    box-shadow: 0px 0px 5px 5px #d325ff;
+    background-color: rgb(3, 3, 3, .9);
+    height: fit-content;
     z-index: 1;
-    margin: 100px 0% 0% 0%;
-  }
+    margin: 25% 25% 0% 0%;
+} */
 
 
 .paragraph {
     margin: 50px;
 }
 
-@media(max-width:1441px){
+/* @media(max-width:1441px){
 .statement {
     width: 100%;
     height: fit-content;
@@ -63,4 +98,22 @@
         width: 100%;
         height: fit-content;
         }
+} */
+
+@media (max-width:800px) {
+    .appContainer {
+        scale: .85
+    }
+    .samplesContainer {
+        scale: .85;
+    }
+}
+
+@media (max-width:1000px) {
+    .appContainer {
+        scale: .85
+    }
+    .samplesContainer {
+        scale: .85;
+    }
 }

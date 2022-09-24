@@ -5,8 +5,10 @@
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     height: fit-content;
+    background-color: transparent;
+    color: black;
 }
 
 .pixelCanvas {
@@ -24,7 +26,7 @@
 }
 
 .pixelCanvas>* {
-    flex: 1 0 2%;
+    flex: 1 0 4%;
     
 }
 .swatch {
@@ -59,35 +61,31 @@
 .sampleTwo {
     display: flex;
     flex-direction: column;
-    margin: 100px 30% 10% 0%;
-    align-self: center;
-    /* justify-self: right; */
-    width: 50.5%;
-    height: 10rem;
-    box-shadow: 0px 0px 25px 10px #9bcfff;
+    width: 45%;
+    height: fit-content;
     text-indent: 1rem;
-    font-size: 2rem;
-    background: white;
-    color: black    ;
-    overflow: hidden;
+    font-size: 1.5rem;
+    color: black;
     transition: all 2s ease-in-out;
-    touch-action: auto; 
+    touch-action: auto;
+    background: transparent;
+    position: relative;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-left: 5%;
 }
 
-.sampleTwo:hover {
+/* .sampleTwo:hover {
     touch-action: auto;
-    transform: scale(1.2);
-    /* transition: background-color 5s ease-in-out 100ms, color 3s ease-in-out; */
+    transform: scale(2.5);
     transition: all 2s ease-in-out;
-    box-shadow: 0px 0px 50px 10px #5fb1ff;
+    box-shadow: 0px 0px 5px 5px #d325ff;
+    background-color: rgb(3, 3, 3, .9);
     height: fit-content;
+    width: 65rem;
     z-index: 1;
-    margin: 100px 0% 10% 0%;
-  }
+  } */
 
-.sampleTwo::-webkit-scrollbar {
-    display: none; /* this is for Chrome, mac stuff */
-  }
 
 .sampleTwoText {
     display: flex;
@@ -133,77 +131,27 @@
     }
   }
 
-  @media(max-width:1921px) {
-    .pixelCanvas { width: 100%; height: 80%;}
-    .pixelCanvas>* {
-        flex: 1 0 2%;        
-    }
-    .artButtons{
-        aspect-ratio: 1 / 1;
-        border-radius: 2px;
-        background-color: whitesmoke;
-        border: 1px solid rgb(161, 161, 161);
-        height: 15px;
-        width: 15px;
-    }
-  }
+  .samplesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    font-family: 'PT Sans Narrow', sans-serif;
+    background-color: transparent;
+    background-image: url("../public/background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    /* position: relative; */
+    align-items: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
 
-  @media(max-width:1501px) {
-    .pixelCanvas { width: 100%; height: 80%;}
-    .pixelCanvas>* {
-        flex: 1 0 2%;        
-    }
-    .artButtons{
-        aspect-ratio: 1 / 1;
-        border-radius: 2px;
-        background-color: whitesmoke;
-        border: 1px solid rgb(161, 161, 161);
-        height: 15px;
-        width: 15px;
-    }
-  }
-
-  @media(max-width:1441px) {
-    .pixelCanvas { width: 100%; height: fit-content;}
-    .pixelCanvas>* {
-        flex: 1 0 2%;        
-    }
-    .artButtons{
-        aspect-ratio: 1 / 1;
-        border-radius: 2px;
-        background-color: whitesmoke;
-        border: 1px solid rgb(161, 161, 161);
-        height: 15px;
-        width: 15px;
-    }
-  }
-
-  @media(max-width:801px) {
-    .pixelCanvas { width: 100%; height: 80%;}
-    .pixelCanvas>* {
-        flex: 1 0 2%;        
-    }
-    .artButtons{
-        aspect-ratio: 1 / 1;
-        border-radius: 2px;
-        background-color: whitesmoke;
-        border: 1px solid rgb(161, 161, 161);
-        height: 10px;
-        width: 10px;
-    }
-  }
-
-  @media(max-width:601px) {
-    .pixelCanvas { width: 100%; height: 80%;}
-    .pixelCanvas>* {
-        flex: 1 0 2%;        
-    }
-    .artButtons{
-        aspect-ratio: 1 / 1;
-        border-radius: 2px;
-        background-color: whitesmoke;
-        border: 1px solid rgb(161, 161, 161);
-        height: 8px;
-        width: 8px;
-    }
-  }
+.appContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100vmax;
+    height: 100vh;
+}

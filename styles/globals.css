@@ -1,13 +1,15 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .typed-cursor {
     display: inline;
-    font-size: 48px;
+    font-size: 24px;
     opacity: 1;
     animation: blink .3s infinite;
+    color: white;
 }
 @keyframes blink {
     0% {
@@ -20,3 +22,4 @@
         opacity: 1;
     }
 }
+

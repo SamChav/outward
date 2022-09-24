@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "../styles/Header.module.css";
 import Typed from "typed.js";
-
+import Link from "next/link";
 const Header = () => {
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
@@ -40,21 +40,51 @@ const Header = () => {
       <div className={styles.text}>
         <h1 className={styles.header} ref={el}></h1>
       </div>
+      <div className={styles.contactMe}>Chavez.samuel1@gmail.com</div>
       <div className={styles.buttonRow}>
-        <a href="https://github.com/SamChav?tab=repositories" target="blank">
-          <button className={styles.menuButton}>Github</button>
-        </a>
-        <a href="https://www.linkedin.com/in/samuel-i-chavez/" target="blank">
+        <a
+          href="https://www.linkedin.com/in/samuel-i-chavez/"
+          className={styles.links}
+          target="blank"
+        >
           <button className={styles.menuButton}>Linked In</button>
-        </a>
-        <a href="http://planetsandstuff.surge.sh/" target="blank">
-          <button className={styles.menuButton}>My First Frontend</button>
         </a>
         <a
           href="https://docs.google.com/document/d/1eiakTCDdTXU2w9vtD_cXVurR797gSyKUAtgTrrAP7cE/"
           target="blank"
+          className={styles.links}
         >
           <button className={styles.menuButton}>My Resume</button>
+        </a>
+      </div>
+      <div className={styles.buttonRow}>
+        <Link href="/">
+          <button className={styles.menuButton}>Home</button>
+        </Link>
+        <Link href="/Todo">
+          <button className={styles.menuButton}>To Do List Example</button>
+        </Link>
+        <Link href="/Timer">
+          <button className={styles.menuButton}>Timer Example</button>
+        </Link>
+        <Link href="/PixelArt">
+          <button className={styles.menuButton}>Pixel Art Maker</button>
+        </Link>
+      </div>
+      <div className={styles.buttonRow}>
+        <a
+          href="https://github.com/SamChav?tab=repositories"
+          className={styles.links}
+          target="blank"
+        >
+          <button className={styles.menuButton}>Github</button>
+        </a>
+        <a
+          href="http://planetsandstuff.surge.sh/"
+          className={styles.links}
+          target="blank"
+        >
+          <button className={styles.menuButton}>My First Frontend</button>
         </a>
       </div>
     </div>

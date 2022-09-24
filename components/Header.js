@@ -56,6 +56,13 @@ const Header = () => {
         >
           <button className={styles.menuButton}>My Resume</button>
         </a>
+        <a
+          href="https://github.com/SamChav?tab=repositories"
+          className={styles.links}
+          target="blank"
+        >
+          <button className={styles.menuButton}>Github</button>
+        </a>
       </div>
       <div className={styles.buttonRow}>
         <Link href="/">
@@ -70,15 +77,6 @@ const Header = () => {
         <Link href="/PixelArt">
           <button className={styles.menuButton}>Pixel Art Maker</button>
         </Link>
-      </div>
-      <div className={styles.buttonRow}>
-        <a
-          href="https://github.com/SamChav?tab=repositories"
-          className={styles.links}
-          target="blank"
-        >
-          <button className={styles.menuButton}>Github</button>
-        </a>
         <a
           href="http://planetsandstuff.surge.sh/"
           className={styles.links}

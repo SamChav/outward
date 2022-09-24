@@ -108,3 +108,23 @@
     width: 100vmax;
     height: 100vh;
 }
+
+@media(max-width:1000px) {
+    .samplesContainer {
+        width: 100%;
+        font-size: 1.5rem;
+        height: fit-content;
+    }
+    .aboutText {
+        width: 80.5%;
+    }
+    .appContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100vmax;
+        height: 100vh;
+    }
+    .todoContainer {
+        align-self: center;
+    }
+}

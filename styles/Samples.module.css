@@ -5,12 +5,6 @@
     height: 100vh;
 }
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
 .samplesContainer {
     display: flex;
     flex-direction: row;
@@ -100,20 +94,19 @@
         }
 } */
 
-@media (max-width:800px) {
-    .appContainer {
-        scale: .85
-    }
+@media(max-width:1000px) {
     .samplesContainer {
-        scale: .85;
+        width: 100%;
+        font-size: 1.5rem;
+        height: fit-content;
     }
-}
-
-@media (max-width:1000px) {
+    .aboutText {
+        width: 80.5%;
+    }
     .appContainer {
-        scale: .85
-    }
-    .samplesContainer {
-        scale: .85;
+        display: flex;
+        flex-direction: column;
+        width: 100vmax;
+        height: 100vh;
     }
 }

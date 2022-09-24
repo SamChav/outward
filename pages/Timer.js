@@ -51,7 +51,7 @@ const Timer = () => {
                 <a
                   style={{ textDecoration: "none" }}
                   target="blank"
-                  href="https://github.com/SamChav/outward/blob/master/components/Timer.js"
+                  href="https://github.com/SamChav/outward/blob/master/pages/Timer.js"
                 >
                   here
                 </a>

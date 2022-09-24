@@ -75,7 +75,7 @@ const PixelArtMaker = () => {
                 <a
                   style={{ textDecoration: "none" }}
                   target="blank"
-                  href="https://github.com/SamChav/outward/blob/master/components/PixelArt.js"
+                  href="https://github.com/SamChav/outward/blob/master/pages/PixelArt.js"
                 >
                   here
                 </a>

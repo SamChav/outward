@@ -97,16 +97,20 @@
 @media(max-width:1000px) {
     .samplesContainer {
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
         height: fit-content;
     }
+    .paragraph {
+        font-size: 1rem;
+    }
     .aboutText {
-        width: 80.5%;
+        width: 100%;
+        font-size: 1rem;
     }
     .appContainer {
         display: flex;
         flex-direction: column;
-        width: 100vmax;
-        height: 100vh;
+        width: 100%;
+        min-height: 100%;
     }
 }

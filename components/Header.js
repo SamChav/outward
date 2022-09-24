@@ -12,7 +12,7 @@ const Header = () => {
       strings: [
         `"Hi..."`,
         `"Welcome to my portfolio"`,
-        `"I'm currently open for work!"`,
+        `"I'm currently open to work!"`,
       ],
       smartBackspace: true,
       typeSpeed: 60,
@@ -41,6 +41,7 @@ const Header = () => {
         <h1 className={styles.header} ref={el}></h1>
       </div>
       <div className={styles.contactMe}>Chavez.samuel1@gmail.com</div>
+      <span className={styles.examplesHeader}>Professional Links</span>
       <div className={styles.buttonRow}>
         <a
           href="https://www.linkedin.com/in/samuel-i-chavez/"
@@ -63,8 +64,18 @@ const Header = () => {
         >
           <button className={styles.menuButton}>Github</button>
         </a>
+        <a
+          href="http://planetsandstuff.surge.sh/"
+          className={styles.links}
+          target="blank"
+        >
+          <button className={styles.menuButton}>My First Frontend</button>
+        </a>
       </div>
+      <span className={styles.examplesHeader}>Site Navigation</span>
+      
       <div className={styles.buttonRow}>
+     
         <Link href="/">
           <button className={styles.menuButton}>Home</button>
         </Link>
@@ -77,13 +88,7 @@ const Header = () => {
         <Link href="/PixelArt">
           <button className={styles.menuButton}>Pixel Art Maker</button>
         </Link>
-        <a
-          href="http://planetsandstuff.surge.sh/"
-          className={styles.links}
-          target="blank"
-        >
-          <button className={styles.menuButton}>My First Frontend</button>
-        </a>
+        
       </div>
     </div>
   );

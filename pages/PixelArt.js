@@ -68,7 +68,7 @@ const PixelArtMaker = () => {
         <div className={styles.samplesContainer}>
           <div className={styles.sampleTwo}>
             <div className={styles.sampleTwoText}>
-              <p>
+              <p className={styles.paragraph}>
                 This is my pixel art maker project, one of the first projects I
                 worked on. I did refactor all the code so this would work with
                 React! You can view the code{" "}

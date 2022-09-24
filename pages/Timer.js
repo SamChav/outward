@@ -31,7 +31,14 @@ const Timer = () => {
     clearInterval(tracker);
     setCounter(0);
     setTracker(false);
+    setLap([])
   };
+
+
+  const lapFunc = () => {
+    //take the value of counter and apply to a div and store it locally
+    setLap([...lap, counter])
+  }
 
   return (
     <div className="root">
@@ -62,12 +69,12 @@ const Timer = () => {
             <div className={styles.counterDiv}>
               Time:
               <span id={styles.timer}>{counter}</span>
-              <div>
-                {lap.map((el, i) => {
-                  <ul key={i}>Lap: {el}</ul>;
-                })}
-              </div>
+
+
+
+              
             </div>
+
             <span className={styles.sampleOneButtons}>
               <button className={styles.button} onClick={startTimer}>
                 start
@@ -78,12 +85,21 @@ const Timer = () => {
               <button className={styles.button} onClick={resetTimer}>
                 reset
               </button>
-              {/* <button className={styles.button} onClick={lapFunc}>
+              <button className={styles.button} onClick={lapFunc}>
           Lap
-        </button> */}
+        </button>
             </span>
+            <span className={styles.lapTracker}><u>Lap tracker:</u></span>
+            {lap.map((lap, index) => {
+                return (
+                  
+                  <div className={styles.lap}><ul key={index}><li>lap #{index + 1}: {lap}</li></ul></div>
+                )
+              })}
           </div>
+
         </div>
+
       </div>
     </div>
   );

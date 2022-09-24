@@ -15,16 +15,6 @@
     margin-left: 5%;
 }
 
-/* .sampleOne:hover {
-    touch-action: auto;
-    transform: scale(1.4);
-    transition: all 2s ease-in-out;
-    box-shadow: 0px 0px 5px 5px #d325ff;
-    background-color: rgb(3, 3, 3, .9);
-    height: fit-content;
-    z-index: 1;
-  } */
-
 .sampleOneText {
     display: flex;
     color: white;
@@ -40,10 +30,10 @@
 
 .counterDiv {    
     display: flex;
+    position: relative;
     margin-top: 10px;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 43%;
+    align-self: center;
 }
 
 .sampleOneButtons {
@@ -100,23 +90,46 @@
     height: 100vh;
 }
 
+.lap {
+    display: flex;
+    position: relative;
+    align-self: center;
+}
+
+.lapTracker {
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin-bottom: 5%;
+}
+
 @media(max-width:1000px) {
     .samplesContainer {
         width: 100%;
-        font-size: 1.5rem;
         height: fit-content;
+        font-size: 1rem;
+    }
+    .paragraph {
+        font-size: 1rem;
+        width: 600px;
     }
     .aboutText {
-        width: 80.5%;
+        width: 300px;
+        font-size: 1rem;
+    }
+    .sampleOneText {
     }
     .appContainer {
         display: flex;
         flex-direction: column;
-        width: 100vmax;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
     }
     .sampleOne {
         align-self: center;
+        font-size: 1rem;
+        width: 100%;
+        height: 100vh;
     }
     .counterDiv {
         margin: 0%;

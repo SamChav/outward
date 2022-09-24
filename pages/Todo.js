@@ -16,7 +16,7 @@ const Todo = () => {
       alert("Message Cannot be over 100 characters long");
       e.target.value = "try again";
     }
-    if (e.key === "Enter" && e.target.value.length <= 100) {
+    if (e.key === "Enter" && e.target.value.length <= 100 && e.target.value.length > 0) {
       axios
         .post("/api/todo", {
           task: `${e.target.value}`,

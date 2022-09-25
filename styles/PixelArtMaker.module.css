@@ -143,8 +143,7 @@
 @media(max-width:1000px) {
     .pixelArtContainer {
         min-width: 800px;
-        align-items: flex-start;
-        gap: 10%;
+        gap: 5%;
         margin-top: 50px;
     }
     .paragraph {
@@ -171,5 +170,8 @@
         flex-direction: column;
         width: 100%;
         height: 100%;
+    }
+    .resetButton {
+        margin-bottom: 20%;
     }
 }

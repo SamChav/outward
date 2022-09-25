@@ -26,12 +26,6 @@
     border-bottom-right-radius: 5px;
 }
 
-/* @keyframes color-change {
-    0% { color: #031497; }
-    50% { color: black; }
-    100% { color: #031497; }
-  } */
-
 .menuButton {
     position: relative;
     color: rgb(231, 231, 231);
@@ -58,7 +52,6 @@
     align-self: center;
     background: transparent;
     gap: 15px;
-    /* min-height: 100%; */
   }
 
   .contactMe {
@@ -91,17 +84,18 @@
 @media (max-width:1000px) {
     .navBar {
         height: 45%;
-        overflow: scroll;
+        overflow: hidden;
         scrollbar-width: none;
     }
     .buttonRow {
         display: flex;
         flex-direction: row;
         margin: 0%;
+        gap: 10px;
+        margin-bottom: 10px;
     }
     .contactMe {
         margin: 0%
     }
-
 
 }  

@@ -117,7 +117,7 @@
 @media(max-width:600px) {
     .pixelArtContainer {
         min-width: 400px;
-        scale: .8;
+        /* scale: .8; */
     }
     .pixelCanvas {
         min-width: 400px;
@@ -126,7 +126,7 @@
 
 @media(max-width:1200px) {
     .pixelCanvas {
-        scale: .8;
+        /* scale: .8; */
         align-self: flex-start;
         align-content: flex-start;
     }
@@ -144,6 +144,8 @@
     .pixelArtContainer {
         min-width: 800px;
         align-items: flex-start;
+        gap: 10%;
+        margin-top: 50px;
     }
     .paragraph {
         font-size: 1rem;
@@ -152,7 +154,7 @@
     }
     .pixelCanvas {
         min-width: 800px;
-        scale: .7;
+        /* scale: .7; */
         margin-bottom: -5%;
         margin-top: -5%;
     }

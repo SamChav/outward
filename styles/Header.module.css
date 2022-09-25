@@ -75,8 +75,7 @@
 
 @media (max-width:800px) {
     .navBar {
-        height: 40vh;
-        overflow: scroll;
+        overflow: hidden;
         scrollbar-width: none;
     }
 }
@@ -89,10 +88,15 @@
     }
     .buttonRow {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
+        scale: .9;
         margin: 0%;
         gap: 5px;
         margin-bottom: 10px;
+    }
+    .menuButton {
+        width: 80px;
     }
     .contactMe {
         margin: 0%

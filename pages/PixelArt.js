@@ -99,7 +99,7 @@ const PixelArtMaker = () => {
                 })}
               </div>
               <div className={styles.pallet}>
-                <p style={{ marginRight: "20px" }}>Current color:</p>
+                <p style={{ marginRight: "20px", marginTop: "35px" }}>Current color:</p>
                 <div
                   style={{
                     backgroundColor: colorPicker,

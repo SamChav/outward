@@ -154,8 +154,8 @@
     }
     .pixelCanvas {
         min-width: 800px;
-        /* scale: .7; */
-        margin-bottom: -5%;
+        scale: .8;
+        margin-bottom: -10%;
         margin-top: -5%;
     }
     .samplesContainer {

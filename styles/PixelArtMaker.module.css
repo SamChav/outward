@@ -144,6 +144,7 @@
         min-width: 800px;
         gap: 5%;
         margin-top: 50px;
+        touch-action: auto;
     }
     .paragraph {
         font-size: 1rem;
@@ -152,7 +153,6 @@
     }
     .pixelCanvas {
         min-width: 800px;
-        scale: .8;
         margin-bottom: -10%;
         margin-top: -5%;
     }
@@ -172,5 +172,8 @@
     }
     .resetButton {
         margin-bottom: 20%;
+    }
+    .pallet {
+        margin-top: 15%;
     }
 }

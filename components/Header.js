@@ -69,7 +69,7 @@ const Header = () => {
           className={styles.links}
           target="blank"
         >
-          <button className={styles.menuButton}>My First Frontend</button>
+          <button className={styles.menuButton}>First Frontend</button>
         </a>
       </div>
       <span className={styles.examplesHeader}>Site Navigation</span>

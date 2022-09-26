@@ -82,7 +82,7 @@
 
 @media (max-width:1000px) {
     .navBar {
-        height: 45%;
+        height: 48%;
         overflow: hidden;
         scrollbar-width: none;
     }

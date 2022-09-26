@@ -52,7 +52,6 @@
     font-size: 1.5rem;
     color: black;
     transition: all 2s ease-in-out;
-    touch-action: auto;
     background: transparent;
     position: relative;
     align-self: flex-start;

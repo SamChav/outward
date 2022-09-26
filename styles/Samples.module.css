@@ -49,7 +49,6 @@
     color: white;
     overflow: hidden;
     transition: all 2s ease-in-out;
-    touch-action: auto;
     background: transparent;
     position: relative;
     background: rgb(0, 0, 0, .8);

@@ -64,13 +64,7 @@ const Header = () => {
         >
           <button className={styles.menuButton}>Github</button>
         </a>
-        <a
-          href="http://planetsandstuff.surge.sh/"
-          className={styles.links}
-          target="blank"
-        >
-          <button className={styles.menuButton}>First Frontend</button>
-        </a>
+
       </div>
       <span className={styles.examplesHeader}>Site Navigation</span>
       
@@ -80,14 +74,34 @@ const Header = () => {
           <button className={styles.menuButton}>Home</button>
         </Link>
         <Link href="/Todo">
-          <button className={styles.menuButton}>To Do List Example</button>
+          <button className={styles.menuButton}>To Do List</button>
         </Link>
         <Link href="/Timer">
-          <button className={styles.menuButton}>Timer Example</button>
+          <button className={styles.menuButton}>Timer</button>
         </Link>
         <Link href="/PixelArt">
           <button className={styles.menuButton}>Pixel Art Maker</button>
         </Link>
+        
+      </div>
+      <span className={styles.examplesHeader}>Projects</span>
+      
+      <div className={styles.buttonRow}>
+     
+      <a
+          href="http://planetsandstuff.surge.sh/"
+          className={styles.links}
+          target="blank"
+        >
+          <button className={styles.menuButton}>Planet Project</button>
+        </a>
+        <a
+          href="http://forguinny.surge.sh/"
+          className={styles.links}
+          target="blank"
+        >
+          <button className={styles.menuButton}>Anime Generator</button>
+        </a>
         
       </div>
     </div>

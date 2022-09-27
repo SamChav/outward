@@ -1,15 +1,18 @@
 .pixelArtContainer {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    flex-direction: column;
+    align-content:flex-start;
     justify-content: center;
     width: 80%;
     min-width: 1200px;
+    max-width: 1200px;
     overflow: hidden;
     font-size: 1.5rem;
     height: fit-content;
     background-color: transparent;
     color: black;
+    margin: 5rem;
 }
 
 .pixelCanvas {
@@ -18,15 +21,14 @@
     position: relative;
     gap: none;
     width: 100%;
-    min-width: 1200px;
+    min-width: 100%;
     max-width: 1200px;
-    height: fit-content;
     justify-content: center;
     background-color: white;
 }
 
 .pixelCanvas>* {
-    flex: 1 0 1%;
+    flex: 0 0 1%;
     
 }
 .swatch {
@@ -39,8 +41,9 @@
 }
 
 .paragraph {
+    position: relative;
     margin: 20px;
-    width: 500px;
+    width: 100%;
 }
 
 .sampleTwo {
@@ -73,6 +76,7 @@
     align-items: center;
     text-align: left;
     position: relative;
+    margin: 1rem;
 }
 
 .resetButton {
@@ -115,65 +119,48 @@
 
 @media(max-width:600px) {
     .pixelArtContainer {
-        min-width: 400px;
-        /* scale: .8; */
-    }
-    .pixelCanvas {
-        min-width: 400px;
-    }
-}
-
-@media(max-width:1200px) {
-    .pixelCanvas {
-        /* scale: .8; */
-        align-self: flex-start;
-        align-content: flex-start;
-    }
-    .paragraph {
-        width: 100%;
-    }
-    .sampleTwoText {
-        width: 400px;
-        margin-bottom: -50px;
-    }
-}
-
-
-@media(max-width:1000px) {
-    .pixelArtContainer {
         min-width: 800px;
-        gap: 5%;
-        margin-top: 50px;
-        touch-action: auto;
-    }
-    .paragraph {
-        font-size: 1rem;
-        width: 500px;
-        align-self: center;
     }
     .pixelCanvas {
         min-width: 800px;
-        margin-bottom: -10%;
-        margin-top: -5%;
     }
-    .samplesContainer {
-        width: 100%;
-        font-size: 1.5rem;
-        height: fit-content;
-    }
-    .aboutText {
-        width: 100%;
-    }
+    
+}
+
+@media(max-width:1100px) {
     .appContainer {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
     }
-    .resetButton {
-        margin-bottom: 20%;
+    .pixelArtContainer {
+        height: fit-content;
+        flex-direction: column;
+        align-content: flex-start;
     }
-    .pallet {
-        margin-top: 15%;
+    .artButtons {
+        height: 10px;
+        aspect-ratio: 1 / 1;
     }
+    .pixelCanvas {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      gap: none;
+      width: 50%;
+      min-width: 50%;
+      max-width: 50%;
+      background-color: white;
+      height: fit-content;
+      min-height: fit-content;
+    }
+    .paragraph {
+        width: 100%;
+    }
+    .sampleTwoText {
+        width: 500px;
+        margin-bottom: -50px;
+    }
+    
 }

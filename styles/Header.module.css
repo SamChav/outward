@@ -80,7 +80,7 @@
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width:1100px) {
     .navBar {
         height: 48%;
         overflow: hidden;
@@ -94,12 +94,20 @@
         margin: 0%;
         gap: 5px;
         margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
     }
     .menuButton {
-        width: 80px;
+        width: 100px;
+        font-size: .7rem;
+        height: 30px;
     }
     .contactMe {
-        margin: 0%
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+    }
+    .examplesHeader {
+        margin: -2.8rem;
     }
 
 }  

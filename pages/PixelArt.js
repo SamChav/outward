@@ -18,7 +18,7 @@ function buildPixels() {
 
 const PixelArtMaker = () => {
   const [pixels, setPixels] = useState(buildPixels());
-  let [colorPicker, setColorPicker] = useState("F44336");
+  let [colorPicker, setColorPicker] = useState("#F44336");
   const [isMouseDown, setIsMouseDown] = useState(false);
 
   function updatePixel(index) {
@@ -103,8 +103,8 @@ const PixelArtMaker = () => {
                 <div
                   style={{
                     backgroundColor: colorPicker,
-                    width: "50px",
-                    height: "50px",
+                    width: "40px",
+                    height: "40px",
                     borderRadius: "10px",
                   }}
                 ></div>

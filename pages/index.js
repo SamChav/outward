@@ -7,6 +7,7 @@ const App = () => {
     <div className="root">
       <Head>
         <title>Samuel Chavez - Full Stack Developer</title>
+        <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
       <div className={styles.appContainer}>
         <Header />
